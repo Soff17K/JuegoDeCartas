@@ -8,6 +8,7 @@
             Console.WriteLine("holaaaa");
             System.Console.WriteLine("qué paso?");
             System.Console.WriteLine("Solo quiero saber, xfa");
+            System.Console.WriteLine("parece que solo aquí funciona");
         }
     }
 }
