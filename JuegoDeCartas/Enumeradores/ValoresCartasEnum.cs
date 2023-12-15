@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProyectoOrdinario.Enumeradores
+namespace JuegoDeCartas.Enumeradores
 {
 	public enum ValoresCartasEnum
 	{

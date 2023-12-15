@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProyectoOrdinario.Interfaces
+namespace JuegoDeCartas.Interfaces
 {
 	public interface IJuego
 	{

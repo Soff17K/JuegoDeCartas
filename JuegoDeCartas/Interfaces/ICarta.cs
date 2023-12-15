@@ -1,7 +1,7 @@
 ﻿using System;
-using ProyectoOrdinario.Enumeradores;
+using JuegoDeCartas.Enumeradores;
 
-namespace ProyectoOrdinario.Interfaces
+namespace JuegoDeCartas.Interfaces
 {
 	public interface ICarta
 	{
