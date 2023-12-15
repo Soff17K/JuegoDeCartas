@@ -65,7 +65,15 @@ namespace JuegoDeCartas.Clases
 
         public ICarta VerCarta(int indiceCarta)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if (indiceCarta >= 0 && indiceCarta <= _deck.Count)
+            {
+                return _deck[indiceCarta];
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("El índice de la carta está fuera de rango");
+            }
         }
     }
 }
