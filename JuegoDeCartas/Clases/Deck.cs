@@ -47,7 +47,10 @@ namespace JuegoDeCartas.Clases
 
         public void MeterCarta(List<ICarta> cartas)
         {
-            throw new NotImplementedException();
+            if (cartas != null &&  cartas.Count > 0)
+            {
+                _deck.AddRange(cartas);
+            }
         }
 
         public ICarta SacarCarta(int indiceCarta)
@@ -65,7 +68,6 @@ namespace JuegoDeCartas.Clases
 
         public ICarta VerCarta(int indiceCarta)
         {
-            //throw new NotImplementedException();
             if (indiceCarta >= 0 && indiceCarta <= _deck.Count)
             {
                 return _deck[indiceCarta];
