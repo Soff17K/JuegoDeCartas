@@ -56,12 +56,12 @@ namespace JuegoDeCartas.Poker
 
         public List<ICarta> MostrarCartas()
         {
-            throw new NotImplementedException();
+            return mano;
         }
 
         public void ObtenerCartas(List<ICarta> cartas)
         {
-            throw new NotImplementedException();
+            mano.AddRange(cartas);
         }
 
         public void RealizarJugada()
