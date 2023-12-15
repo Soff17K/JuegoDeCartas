@@ -69,12 +69,5 @@ namespace JuegoDeCartas.Clases
             throw new NotImplementedException();
         }
 
-        private void ValidarIndiceCarta(int indiceCarta)
-        {
-            if (indiceCarta < 0 || indiceCarta >= mano.Count)
-            {
-                throw new ArgumentOutOfRangeException("Índice fuera del rango de la mano del jugador");
-            }
-        }
     }
 }
