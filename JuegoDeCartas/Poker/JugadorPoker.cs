@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JuegoDeCartas.Clases
+namespace JuegoDeCartas.Poker
 {
     public class Jugador : IJugador
     {
