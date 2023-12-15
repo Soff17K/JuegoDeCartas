@@ -67,6 +67,7 @@ namespace JuegoDeCartas._21_BlackJack
         public void RealizarJugada()
         {
             throw new NotImplementedException();
+            
         }
 
     }

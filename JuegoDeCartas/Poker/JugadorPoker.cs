@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace JuegoDeCartas.Poker
 {
@@ -67,6 +68,33 @@ namespace JuegoDeCartas.Poker
         public void RealizarJugada()
         {
             throw new NotImplementedException();
+            /*Console.WriteLine("¿Quieres devolver alguna carta?");
+             * La respuesta la poner en un switch
+             * switch(respuesta)
+             * {
+             *   case 1(No):
+             *   break;
+             *   
+             *   case2(Si):
+             *   do
+             *   {
+             *     Console.Writeline("¿En qué posición está la carta que quieres devolver");
+
+             *     funcion DevolverCarta(respuesta - 1) el -1 pq el índice de la lista empieza en 0
+             *     después acá no se si sería crear un nuevo deck o usar uno ya existente en el juego pero ajá
+             *     MeterCarta(carta devuelta);
+             *     y después sacar otra carta para darsela
+             *     SacarCarta(0);
+             *     mano.Add(carta sacada); me imagino que se tendría que agregar en la posición de donde la sacó o no se
+             *   while(si quiera devolver otra carta)
+             *   { 
+             *     Console.Writeline("¿Quieres devolver otra carta?");
+             *   }
+             * 
+             * 
+             * 
+             * 
+             */
         }
 
     }
