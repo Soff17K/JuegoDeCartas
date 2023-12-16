@@ -5,16 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics.Metrics;
+using JuegoDeCartas.Clases;
 
 namespace JuegoDeCartas.Poker
 {
     public class Jugador : IJugador
     {
         private List<ICarta> mano;
+        private List<ICarta> nuevaMano;
 
         public Jugador()
         {
             mano = new List<ICarta>();
+            nuevaMano = new List<ICarta>();
         }
 
         public ICarta DevolverCarta(int indiceCarta)
@@ -67,34 +71,62 @@ namespace JuegoDeCartas.Poker
 
         public void RealizarJugada()
         {
-            throw new NotImplementedException();
-            /*Console.WriteLine("¿Quieres devolver alguna carta?");
-             * La respuesta la poner en un switch
-             * switch(respuesta)
-             * {
-             *   case 1(No):
-             *   break;
-             *   
-             *   case2(Si):
-             *   do
-             *   {
-             *     Console.Writeline("¿En qué posición está la carta que quieres devolver");
 
-             *     funcion DevolverCarta(respuesta - 1) el -1 pq el índice de la lista empieza en 0
-             *     después acá no se si sería crear un nuevo deck o usar uno ya existente en el juego pero ajá
-             *     MeterCarta(carta devuelta);
-             *     y después sacar otra carta para darsela
-             *     SacarCarta(0);
-             *     mano.Add(carta sacada); me imagino que se tendría que agregar en la posición de donde la sacó o no se
-             *   while(si quiera devolver otra carta)
-             *   { 
-             *     Console.Writeline("¿Quieres devolver otra carta?");
-             *   }
-             * 
-             * 
-             * 
-             * 
-             */
+            Deck deck = new Deck();
+            
+            System.Console.WriteLine("¿Quieres devolver alguna carta?");
+            Random rnd = new Random();
+
+            int eleccion = rnd.Next(1,2+1);
+
+            switch(eleccion){
+                case 1:
+                
+                    break;
+
+                case 2:
+
+                    bool seguir = true;
+
+                    do {
+                        System.Console.WriteLine("¿En qué posición está la carta a devolver?");
+                        int posicionDevolver = rnd.Next(1, 5+1);
+
+
+                        if (posicionDevolver >= 0 && posicionDevolver < mano.Count)
+                        {
+                            ICarta cartaDevuelta = DevolverCarta(posicionDevolver);
+
+                            nuevaMano.Add(cartaDevuelta); // Mete la carta devuelta en otro mazo
+
+                            ICarta cartaSacada = deck.SacarCarta(0); // Saca una carta del mazo principal
+
+                            mano.Add(cartaSacada); // Mete la carta sacada al mazo del jugador
+
+                            System.Console.WriteLine("¿Quieres devolver otra carta?");
+                            int eleccion2 = rnd.Next(1, 2 + 1);
+
+                            if (eleccion2 == 1)
+                            {
+                                seguir = true;
+                            }
+                            else if (eleccion2 == 2)
+                            {
+                                seguir = false;
+                            }
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("La posición ingresada no es válida. Inténtalo de nuevo.");
+                        }
+
+                        
+                    } while (seguir == true);
+
+                    break;
+                
+            }
+
         }
 
     }
