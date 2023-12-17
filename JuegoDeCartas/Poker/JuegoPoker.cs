@@ -110,6 +110,12 @@ namespace JuegoDeCartas.Poker
             
             var trio = (mismoNumero /*3*/);
 
+            var doblePareja = (mismoNumero/*2*/ && mismoNumero/*2*/);
+            
+            var pareja = (mismoNumero/*2*/);
+
+            var cartaMasAlta = (mismoNumero);
+
             for (int i = 0; i < jugadores.Count; i++)
             {
                 foreach (var mano in jugadores){
