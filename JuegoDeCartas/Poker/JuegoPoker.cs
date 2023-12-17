@@ -35,14 +35,15 @@ namespace JuegoDeCartas.Poker
                 Dealer.RepartirCartas(5);
                 jugador.MostrarCartas();
             }  
-            
-            
 
         }
 
         public void JugarRonda()
         {
-            // Código para jugar una ronda del juego
+            foreach(var jugador in jugadores)
+            {
+                jugador.RealizarJugada();
+            }
         }
 
         public void MostrarGanador()
