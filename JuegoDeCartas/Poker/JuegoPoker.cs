@@ -51,7 +51,7 @@ namespace JuegoDeCartas.Poker
         {
             // Código para mostrar al ganador del juego
 
-            var escalera9a5 = (mano == ValoresCartasEnum.Nueve && 
+            /*var escalera9a5 = (mano == ValoresCartasEnum.Nueve && 
                     mano == ValoresCartasEnum.Ocho && 
                     mano == ValoresCartasEnum.Siete &&
                     mano == ValoresCartasEnum.Seis &&
@@ -100,21 +100,21 @@ namespace JuegoDeCartas.Poker
             var escaleraDeColor = ((escalera9a5 || escalera8a4 || escalera7a3 ||
                     escalera6a2 || escalera5aAs) && mismoPalo);
 
-            var poker = (mismoNumero);
+            var poker = (mismoNumero); // aqui se vería verificar cuál es el valor de la quinta carta
 
-            var full = ((mismoNumero /*3*/ && mismoNumero /*2*/) && mismoPalo);
+            var full = ((mismoNumero 3 && mismoNumero 2) && mismoPalo);
 
-            var color = mismoPalo;
+            var color = mismoPalo; // aqui la carta más alta debería verificar el valor de la mano
 
             var escalera = (escalera9a5 || escalera8a4 || escalera7a3 || escalera6a2 || escalera5aAs);
             
-            var trio = (mismoNumero /*3*/);
+            var trio = (mismoNumero 3); // aquí debería verificar si hay 3 cartas del mismo valor
 
-            var doblePareja = (mismoNumero/*2*/ && mismoNumero/*2*/);
+            var doblePareja = (mismoNumero 2 && mismoNumero 2 ); // aquí debería verificar si hay dos parejas de cartas del mismo valor
             
-            var pareja = (mismoNumero/*2*/);
+            var pareja = (mismoNumero 2 ); // aqui debería verificar si hay dos cartas del mismo valor
 
-            var cartaMasAlta = (mismoNumero);
+            var cartaMasAlta = (mismoNumero); // aquí realmente debería simplemente seleccionar la carta más alta
 
             for (int i = 0; i < jugadores.Count; i++)
             {
@@ -125,10 +125,54 @@ namespace JuegoDeCartas.Poker
                         System.Console.WriteLine($"¡Jugador {i} ganó la partida con una escalera real!");
 
                     }
+                    else if (escaleraDeColor) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una escalera de color!");
+
+                    }
+                    else if (poker) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con un poker!");
+
+                    }
+                    else if (full) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con un full!");
+
+                    }
+                    else if (color) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con un 'color'!");
+
+                    }
+                    else if (escalera) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una escalera!");
+
+                    }
+                    else if (trio) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con un trio!");
+
+                    }
+                    else if (doblePareja) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una doble pareja!");
+
+                    }
+                    else if (pareja) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una pareja!");
+
+                    }
+                    else if (cartaMasAlta) {
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una carta más alta!");
+
+                    }
                     
                 }
-            }
-
+            }*/
         }
     }
 }
