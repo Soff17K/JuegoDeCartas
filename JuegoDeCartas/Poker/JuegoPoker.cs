@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JuegoDeCartas.Clases;
+using JuegoDeCartas.Enumeradores;
 
 namespace JuegoDeCartas.Poker
 {
@@ -49,6 +50,30 @@ namespace JuegoDeCartas.Poker
         public void MostrarGanador()
         {
             // Código para mostrar al ganador del juego
+
+            var escaleraReal = ((mano == ValoresCartasEnum.As && 
+                    mano == ValoresCartasEnum.Rey && 
+                    mano == ValoresCartasEnum.Reina && 
+                    mano == ValoresCartasEnum.Jota &&
+                    mano == ValoresCartasEnum.Diez) && 
+                    (mano == FigurasCartasEnum.Espadas || mano == FigurasCartasEnum.Diamantes ||
+                    mano == FigurasCartasEnum.Corazones || mano == FigurasCartasEnum.Treboles ));
+
+            var escaleraDeColor = 
+
+            for (int i = 0; i < jugadores.Count; i++)
+            {
+                foreach (var mano in jugadores){
+                    
+                    if (escaleraReal){
+
+                        System.Console.WriteLine($"¡Jugador {i} ganó la partida con una escalera real!");
+
+                    }
+                    
+                }
+            }
+
         }
     }
 }
