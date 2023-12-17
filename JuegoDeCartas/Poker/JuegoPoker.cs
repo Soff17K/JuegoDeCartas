@@ -104,6 +104,12 @@ namespace JuegoDeCartas.Poker
 
             var full = ((mismoNumero /*3*/ && mismoNumero /*2*/) && mismoPalo);
 
+            var color = mismoPalo;
+
+            var escalera = (escalera9a5 || escalera8a4 || escalera7a3 || escalera6a2 || escalera5aAs);
+            
+            var trio = (mismoNumero /*3*/);
+
             for (int i = 0; i < jugadores.Count; i++)
             {
                 foreach (var mano in jugadores){
