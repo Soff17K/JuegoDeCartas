@@ -23,7 +23,7 @@ namespace JuegoDeCartas.Poker
 
         public void AgregarJugador(IJugador jugador)
         {
-            // Código para agregar un jugador al juego
+            jugadores.Add(jugador);
         }
 
         public void IniciarJuego()
