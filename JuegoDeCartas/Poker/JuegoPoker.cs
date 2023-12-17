@@ -84,6 +84,12 @@ namespace JuegoDeCartas.Poker
             var mismoPalo = (mano == FigurasCartasEnum.Espadas || mano == FigurasCartasEnum.Diamantes ||
                     mano == FigurasCartasEnum.Corazones || mano == FigurasCartasEnum.Treboles );
 
+            var mismoNumero = (mano == ValoresCartasEnum.Rey || mano == ValoresCartasEnum.Reina ||
+                mano == ValoresCartasEnum.Jota || mano == ValoresCartasEnum.Diez || mano == ValoresCartasEnum.Nueve ||
+                mano == ValoresCartasEnum.Ocho || mano == ValoresCartasEnum.Siete || mano == ValoresCartasEnum.Seis || 
+                mano == ValoresCartasEnum.Cinco || mano == ValoresCartasEnum.Cuatro || mano == ValoresCartasEnum.Tres ||
+                mano == ValoresCartasEnum.Dos || mano == ValoresCartasEnum.As);
+
             var escaleraReal = ((mano == ValoresCartasEnum.As && 
                     mano == ValoresCartasEnum.Rey && 
                     mano == ValoresCartasEnum.Reina && 
@@ -94,7 +100,7 @@ namespace JuegoDeCartas.Poker
             var escaleraDeColor = ((escalera9a5 || escalera8a4 || escalera7a3 ||
                     escalera6a2 || escalera5aAs) && mismoPalo);
 
-            
+            var Poker = (mismoNumero);
 
             for (int i = 0; i < jugadores.Count; i++)
             {
