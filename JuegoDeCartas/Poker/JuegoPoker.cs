@@ -51,15 +51,50 @@ namespace JuegoDeCartas.Poker
         {
             // Código para mostrar al ganador del juego
 
+            var escalera9a5 = (mano == ValoresCartasEnum.Nueve && 
+                    mano == ValoresCartasEnum.Ocho && 
+                    mano == ValoresCartasEnum.Siete &&
+                    mano == ValoresCartasEnum.Seis &&
+                    mano == ValoresCartasEnum.Cinco);
+
+            var escalera8a4 = (mano == ValoresCartasEnum.Ocho && 
+                    mano == ValoresCartasEnum.Siete &&
+                    mano == ValoresCartasEnum.Seis &&
+                    mano == ValoresCartasEnum.Cinco &&
+                    mano == ValoresCartasEnum.Cuatro);
+
+            var escalera7a3 = (mano == ValoresCartasEnum.Siete &&
+                    mano == ValoresCartasEnum.Seis &&
+                    mano == ValoresCartasEnum.Cinco &&
+                    mano == ValoresCartasEnum.Cuatro &&
+                    mano == ValoresCartasEnum.Tres);
+
+            var escalera6a2 = (mano == ValoresCartasEnum.Seis &&
+                    mano == ValoresCartasEnum.Cinco &&
+                    mano == ValoresCartasEnum.Cuatro &&
+                    mano == ValoresCartasEnum.Tres &&
+                    mano == ValoresCartasEnum.Dos);
+
+            var escalera5aAs = (mano == ValoresCartasEnum.Cinco &&
+                    mano == ValoresCartasEnum.Cuatro &&
+                    mano == ValoresCartasEnum.Tres &&
+                    mano == ValoresCartasEnum.Dos
+                    mano == ValoresCartasEnum.As);
+
+            var mismoPalo = (mano == FigurasCartasEnum.Espadas || mano == FigurasCartasEnum.Diamantes ||
+                    mano == FigurasCartasEnum.Corazones || mano == FigurasCartasEnum.Treboles );
+
             var escaleraReal = ((mano == ValoresCartasEnum.As && 
                     mano == ValoresCartasEnum.Rey && 
                     mano == ValoresCartasEnum.Reina && 
                     mano == ValoresCartasEnum.Jota &&
                     mano == ValoresCartasEnum.Diez) && 
-                    (mano == FigurasCartasEnum.Espadas || mano == FigurasCartasEnum.Diamantes ||
-                    mano == FigurasCartasEnum.Corazones || mano == FigurasCartasEnum.Treboles ));
+                    mismoPalo);
 
-            var escaleraDeColor = 
+            var escaleraDeColor = ((escalera9a5 || escalera8a4 || escalera7a3 ||
+                    escalera6a2 || escalera5aAs) && mismoPalo);
+
+            
 
             for (int i = 0; i < jugadores.Count; i++)
             {
