@@ -28,7 +28,16 @@ namespace JuegoDeCartas.Poker
 
         public void IniciarJuego()
         {
-            // Código para iniciar el juego
+          
+            Dealer.BarajearDeck();
+            foreach(var jugador in jugadores)
+            {
+                Dealer.RepartirCartas(5);
+                jugador.MostrarCartas();
+            }  
+            
+            
+
         }
 
         public void JugarRonda()
