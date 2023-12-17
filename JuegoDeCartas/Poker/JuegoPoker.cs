@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JuegoDeCartas.Deck;
+using JuegoDeCartas.Clases;
 
 namespace JuegoDeCartas.Poker
 {
@@ -13,19 +13,37 @@ namespace JuegoDeCartas.Poker
         public IDealer Dealer { get; set; }
         public bool JuegoTerminado { get; set; }
 
+        public List<IJugador> jugadores;
+
+        public JuegoPoker (IDealer dealer)
+        {
+            this.Dealer = dealer;
+            jugadores = new List<IJugador> ();
+        }
+
         public void AgregarJugador(IJugador jugador)
         {
-            // Código para agregar un jugador al juego
+            jugadores.Add(jugador);
         }
 
         public void IniciarJuego()
         {
-            // Código para iniciar el juego
+          
+            Dealer.BarajearDeck();
+            foreach(var jugador in jugadores)
+            {
+                Dealer.RepartirCartas(5);
+                jugador.MostrarCartas();
+            }  
+
         }
 
         public void JugarRonda()
         {
-            // Código para jugar una ronda del juego
+            foreach(var jugador in jugadores)
+            {
+                jugador.RealizarJugada();
+            }
         }
 
         public void MostrarGanador()
