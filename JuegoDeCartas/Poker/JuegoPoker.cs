@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JuegoDeCartas.Deck;
+using JuegoDeCartas.Clases;
 
 namespace JuegoDeCartas.Poker
 {
@@ -12,6 +12,14 @@ namespace JuegoDeCartas.Poker
     {
         public IDealer Dealer { get; set; }
         public bool JuegoTerminado { get; set; }
+
+        public List<IJugador> jugadores;
+
+        public JuegoPoker (IDealer dealer)
+        {
+            this.Dealer = dealer;
+            jugadores = new List<IJugador> ();
+        }
 
         public void AgregarJugador(IJugador jugador)
         {
