@@ -100,7 +100,9 @@ namespace JuegoDeCartas.Poker
             var escaleraDeColor = ((escalera9a5 || escalera8a4 || escalera7a3 ||
                     escalera6a2 || escalera5aAs) && mismoPalo);
 
-            var Poker = (mismoNumero);
+            var poker = (mismoNumero);
+
+            var full = ((mismoNumero /*3*/ && mismoNumero /*2*/) && mismoPalo);
 
             for (int i = 0; i < jugadores.Count; i++)
             {
