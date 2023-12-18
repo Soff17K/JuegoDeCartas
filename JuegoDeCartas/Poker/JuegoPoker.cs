@@ -45,6 +45,7 @@ namespace JuegoDeCartas.Poker
             {
                 jugador.RealizarJugada();
                 // buenos dias
+                // AAAAAAAAAAAAAAAAAAAAAAAAA -sufrimiento-
             }
         }
 
