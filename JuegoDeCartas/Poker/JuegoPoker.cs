@@ -44,6 +44,8 @@ namespace JuegoDeCartas.Poker
             foreach(var jugador in jugadores)
             {
                 jugador.RealizarJugada();
+                // buenos dias
+                // AAAAAAAAAAAAAAAAAAAAAAAAA -sufrimiento-
             }
         }
 
